@@ -10,7 +10,6 @@ export default function Contact() {
   }
 
   return (
-    <></> /*
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex justify-center items-center flex sm::flex-nowrap flex-wrap">
         <form
@@ -77,6 +76,6 @@ export default function Contact() {
           </button>
         </form>
       </div>
-    </section>*/
+    </section>
   );
 }
