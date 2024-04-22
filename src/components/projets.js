@@ -1,7 +1,7 @@
 import "../index.css";
 import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
-import { projects } from "../data";
+import { projets } from "../data";
 
 export default function Projets() {
   return (
@@ -15,7 +15,7 @@ export default function Projets() {
           <p></p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {projects.map((projet) => (
+          {projets.map((projet, index) => (
             <a
               href={projet.link}
               key={projet.image}
@@ -23,7 +23,6 @@ export default function Projets() {
             >
               <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 ">
                 <img
-                  alt="gallerie"
                   className="absolute inset-0 w-full h-full object-cover object-center"
                   src={projet.image}
                 />

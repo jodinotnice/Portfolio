@@ -1,10 +1,10 @@
-export const projects = [
+export const projets = [
   {
     title: "Mon Vieux Grimoire",
     subtitle: "Node.js, Express.js, MongoDB",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/gxmrd.png",
+    image: "images/kasa3.png",
     link: "https://reactbootcamp.com",
   },
   {
@@ -12,7 +12,7 @@ export const projects = [
     subtitle: "React",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/gxmrd.png",
+    image: "images/kasa5.png",
     link: "https://reactbootcamp.com",
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
     subtitle: "Optimisatio, débogage et améliroation du SEO",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/gxmrd.png",
+    image: "images/kasa4.png",
     link: "https://reedbarger.com",
   },
   {
@@ -28,7 +28,7 @@ export const projects = [
     subtitle: "Javascript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/gxmrd.png",
+    image: "../public/images/kasa2.png",
     link: "https://jsbootcamp.com",
   },
   {
@@ -36,7 +36,7 @@ export const projects = [
     subtitle: "HTML/CSS",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/gxmrd.png",
+    image: "images/frog.png",
     link: "https://pythonbootcamp.com",
   },
 ];

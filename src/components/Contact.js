@@ -1,30 +1,12 @@
 import "../index.css";
+import { useForm, ValidationError } from "@formspree/react";
 import React from "react";
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [state, handleSubmit] = useForm("xrgnrypv");
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("https://formspree.io/f/xrgnrypv", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, message }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then(() => alert("Message envoyé!"))
-      .catch((error) =>
-        alert("Une erreur s'est produite, veuillez réessayer plus tard.")
-      );
+  if (state.succeeded) {
+    return <p>Merci pour votre message!</p>;
   }
 
   return (
@@ -46,9 +28,7 @@ export default function Contact() {
               type="text"
               id="name"
               name="name"
-              value={name}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="relative mb-4">
@@ -59,9 +39,12 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
-              value="email"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
             />
           </div>
           <div className="relative mb-4">
@@ -74,19 +57,22 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
-              value={message}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
             />
           </div>
           <button
             type="submit"
+            disabled={state.submitting}
             className={`text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg ${
-              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              state.submitting ? "opacity-50 cursor-not-allowed" : ""
             }`}
-            disabled={isSubmitting}
           >
-            {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+            {state.submitting ? "Envoi en cours..." : "Envoyer"}
           </button>
         </form>
       </div>
