@@ -11,7 +11,7 @@ export default function About() {
             <br className="hidden lg:inline-block" />
             Développeur-Web
           </h1>
-          <p>
+          <p className="mb-8 leading-relaxed">
             Passionné de développement web en pleine formation chez
             OpenClassrooms en tant que développeur web. Ma passion pour la
             création de belles interfaces utilisateur et ma curiosité pour les
@@ -45,7 +45,7 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex justify-center lg:justify-end">
           <img
             className="object-cover object-center rounded"
             alt="hero"
