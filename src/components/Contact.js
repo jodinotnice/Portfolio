@@ -6,31 +6,31 @@ export default function Contact() {
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://contact-form.netlify.app/", {
+    fetch("https://formspree.io/f/xrgnrypv", {
       method: "POST",
-      mode: "cors",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
     })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then(() => alert("Message envoyé!"))
-      .catch((error) => alert(error));
+      .catch((error) =>
+        alert("Une erreur s'est produite, veuillez réessayer plus tard.")
+      );
   }
+
   return (
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex justify-center items-center flex sm::flex-nowrap flex-wrap">
         <form
-          netlify
-          name="contact"
           className="lg:w-1/3 flex flex-col w-full md:py-8 mt-8 md:mt-0"
           onSubmit={handleSubmit}
         >
@@ -46,6 +46,7 @@ export default function Contact() {
               type="text"
               id="name"
               name="name"
+              value={name}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setName(e.target.value)}
             />
@@ -58,6 +59,7 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
+              value="email"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -72,15 +74,19 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
+              value={message}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className={`text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={isSubmitting}
           >
-            Envoyer
+            {isSubmitting ? "Envoi en cours..." : "Envoyer"}
           </button>
         </form>
       </div>
