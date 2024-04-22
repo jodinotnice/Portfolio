@@ -49,7 +49,7 @@ export default function About() {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="assets/frog.png"
+            src="images/frog.png"
           />
         </div>
       </div>
