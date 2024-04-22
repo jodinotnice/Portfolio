@@ -4,7 +4,7 @@ export const projets = [
     subtitle: "Node.js, Express.js, MongoDB",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa3.png",
+    image: "assets/kasa3.png",
     link: "https://reactbootcamp.com",
   },
   {
@@ -12,7 +12,7 @@ export const projets = [
     subtitle: "React",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa5.png",
+    image: "assets/kasa5.png",
     link: "https://reactbootcamp.com",
   },
   {
@@ -20,7 +20,7 @@ export const projets = [
     subtitle: "Optimisatio, débogage et améliroation du SEO",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa4.png",
+    image: "assets/kasa4.png",
     link: "https://reedbarger.com",
   },
   {
@@ -28,7 +28,7 @@ export const projets = [
     subtitle: "Javascript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "../public/images/kasa2.png",
+    image: "assets/kasa2.png",
     link: "https://jsbootcamp.com",
   },
   {
@@ -36,7 +36,7 @@ export const projets = [
     subtitle: "HTML/CSS",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/frog.png",
+    image: "assets/kasa1.png",
     link: "https://pythonbootcamp.com",
   },
 ];
