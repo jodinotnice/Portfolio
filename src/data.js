@@ -17,7 +17,7 @@ export const projets = [
   },
   {
     title: "Nina Carducci",
-    subtitle: "Optimisatio, débogage et améliroation du SEO",
+    subtitle: "Optimisation, débogage et améliroation du SEO",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
     image: "images/kasa4.png",
