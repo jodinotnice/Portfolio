@@ -5,7 +5,7 @@ import { projets } from "../data";
 
 export default function Skills() {
   return (
-    <section>
+    <section id="competences">
       <div className="Container px-5 py-10 mx-auto">
         <div className="text-center mb-20">
           <ChipIcon className="w-10 inline-block mb-4" />
