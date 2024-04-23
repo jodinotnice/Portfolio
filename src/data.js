@@ -4,39 +4,40 @@ export const projets = [
     subtitle: "Node.js, Express.js, MongoDB",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa3.png",
-    link: "https://reactbootcamp.com",
+    image: "images/MonVieuxGrimoire/grimoire.png",
+    link: "https://github.com/jodinotnice/OC_Projet_7",
   },
   {
     title: "Kasa",
     subtitle: "React",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa5.png",
-    link: "https://reactbootcamp.com",
+    image: "images/kasa/kasa1.png",
+    link: "https://github.com/jodinotnice/OC_Projet_6",
+    visit: "https://main--projet6.netlify.app",
   },
   {
     title: "Nina Carducci",
-    subtitle: "Optimisation, débogage et améliroation du SEO",
+    subtitle: "Optimisation Site et SEO, débogage",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa4.png",
-    link: "https://reedbarger.com",
+    image: "images/NinaCarducci/Nina1.png",
+    link: "https://github.com/jodinotnice/Oc_Projet5",
   },
   {
     title: "Portfolio Sophie Bluel",
     subtitle: "Javascript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa2.png",
-    link: "https://jsbootcamp.com",
+    image: "images/SophieBuel/Sophie.png",
+    link: "https://github.com/jodinotnice/OC-Projet-3",
   },
   {
     title: "Booki",
     subtitle: "HTML/CSS",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/kasa1.png",
-    link: "https://pythonbootcamp.com",
+    image: "images/Booki/booki.png",
+    link: "https://github.com/jodinotnice/OC-Project-2",
   },
 ];
