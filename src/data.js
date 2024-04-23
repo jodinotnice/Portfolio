@@ -29,7 +29,7 @@ export const projets = [
     subtitle: "Javascript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/SophieBuel/sophie.png",
+    image: "images/SophieBluel/sophie.png",
     link: "https://github.com/jodinotnice/OC-Projet-3",
   },
   {
