@@ -16,7 +16,12 @@ export default function Projets() {
         </div>
         <div className="flex flex-wrap -m-4">
           {projets.map((projet, index) => (
-            <a href={projet.link} key={index} className="sm:w-1/2 w-100 p-4">
+            <a
+              href={projet.visit}
+              key={index}
+              className="sm:w-1/2 w-100 p-4"
+              target="_blank"
+            >
               <div className="px-8 py-10 relative z-9 w-full border-4 border-gray-800 bg-gray-900 ">
                 <img
                   alt={projet.title}
@@ -33,6 +38,23 @@ export default function Projets() {
                   <p className="leading-relaxed">{projet.description}</p>
                 </div>
               </div>
+              <a
+                href={projet.link}
+                className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
+                target="_blank"
+              >
+                {"</>Code"}
+              </a>
+
+              {projet.visit ? (
+                <a
+                  href={projet.visit}
+                  className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
+                  target="_blank"
+                >
+                  {"</>Visit"}
+                </a>
+              ) : null}
             </a>
           ))}
         </div>
