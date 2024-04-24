@@ -38,23 +38,25 @@ export default function Projets() {
                   <p className="leading-relaxed">{projet.description}</p>
                 </div>
               </div>
-              <a
-                href={projet.link}
-                className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
-                target="_blank"
-              >
-                {"</>Code"}
-              </a>
-
-              {projet.visit ? (
+              <div className="max-sm:flex">
                 <a
-                  href={projet.visit}
-                  className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
+                  href={projet.link}
+                  className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg max-sm:flex justify-center max-sm:w-16 max-sm:text-xs"
                   target="_blank"
                 >
-                  {"</>Visit"}
+                  {"</>Code"}
                 </a>
-              ) : null}
+
+                {projet.visit ? (
+                  <a
+                    href={projet.visit}
+                    className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg max-sm:flex justify-center max-sm:w-16 max-sm:text-xs "
+                    target="_blank"
+                  >
+                    {"</>Visit"}
+                  </a>
+                ) : null}
+              </div>
             </a>
           ))}
         </div>

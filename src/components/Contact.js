@@ -6,7 +6,11 @@ export default function Contact() {
   const [state, handleSubmit] = useForm("xrgnrypv");
 
   if (state.succeeded) {
-    return <p>Merci pour votre message!</p>;
+    return (
+      <p className="flex justify-center text-2xl font-medium text-white py-20">
+        Merci pour votre message!
+      </p>
+    );
   }
 
   return (

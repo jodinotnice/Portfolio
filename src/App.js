@@ -7,8 +7,7 @@ import "./index.css";
 
 export default function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font min-w-min md:min-w-screen p-0 m-0">
-      <Navbar />
+    <main className="text-gray-400 bg-gray-900 body-font">
       <About />
       <Projets />
       <Skills />
