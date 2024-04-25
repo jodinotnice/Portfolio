@@ -4,7 +4,7 @@ export const projets = [
     subtitle: "Node.js, Express.js, MongoDB",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "images/MonVieuxGrimoire/grimoire.png",
+    image: "/images/MonVieuxGrimoire/grimoire.png",
     link: "https://github.com/jodinotnice/OC_Projet_7",
   },
   {

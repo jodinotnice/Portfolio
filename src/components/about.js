@@ -22,7 +22,6 @@ export default function About() {
             <a
               href="#contact"
               className="inline-flex max-sm:flex justify-center max-sm:w-16 max-sm:text-xs text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
-              target="_blank"
             >
               Contactez-moi
             </a>
@@ -41,7 +40,7 @@ export default function About() {
               Linkedin
             </a>
             <a
-              href=""
+              href="https://jordan-akpovi.tiiny.site/"
               className="ml-4 inline-flex max-sm:flex justify-center max-sm:w-16 max-sm:text-xs  text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
               target="_blank"
             >
